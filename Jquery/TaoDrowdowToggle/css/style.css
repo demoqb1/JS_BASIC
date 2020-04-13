@@ -1,0 +1,36 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.container {
+    text-align: center;
+}
+
+.hieuung {width: 500px;margin: auto;}
+
+.motkhoi h3 {
+    padding: 10px;
+    margin: auto;
+    background: darkseagreen;
+}
+
+.ndmotkhoi {
+    padding: 20px;
+    background: #f5efe8;
+    border: 1px solid indianred;
+}
+.motkhoi h3:hover {
+	background: url(../image/images.png) no-repeat 95%  ;
+	background-size: 10%;
+	background-color:darkseagreen ;
+}
+
+h3.mauxanh{
+	background: green;
+}
+
+.motkhoi h3.mauxanh:hover {
+	background: url(../image/len.png) no-repeat 95%  ;
+	background-size: 10%;
+	background-color:darkseagreen ;
+}

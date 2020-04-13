@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <script src="jquery-3.4.1.min.js"></script>
+    </head>
+<body>
+
+
+
+            <div>
+                <button id="load-du-lieu">Load</button>
+            </div>
+
+            <div id="noidung">
+            </div>
+            <!-- Phương thức “load()” -->
+
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#load-du-lieu").click(function(e) {
+                        e.preventDefault();
+                       $.get('vidu1.html', function(ketqua) {
+                        //lấy toàn bộ html
+                       var a= $('#noidung').html(ketqua);
+                        //lấy toàn bộ html với đk id
+                        $('#noidung').html($('#chuoi-can-lay').html());
+                        console.log(a);
+                     });
+                    });
+                });
+            </script>
+
+
+</body>
+</html>

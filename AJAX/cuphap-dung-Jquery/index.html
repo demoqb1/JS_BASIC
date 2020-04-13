@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script language="javascript" src="../jquery-3.4.1.min.js"></script>
+
+    </head>
+    <body>
+        <div id="result">
+            Nội dung ajax sẽ được load ở đây
+        </div>
+    	<input type="text" name="" id="value">
+        <input type="button" name="clickme" id="clickme" onclick="load_ajax()" value="Click Me"/>
+
+        <script language="javascript">
+            function load_ajax(){
+
+            var bien=$('#value').val();
+               $.ajax({
+               	//gửi 1 rq lên file result.php với .....
+	               	url  : 'result.php',
+	               	type : 'GET',
+	               	dataType  : 'text',
+	               	data  : {
+	               		title: bien,
+	               		keyworld: 'arra'
+
+	               	},
+	               	success  : function(result){
+	               		$('#result').html(result);
+	               	}
+
+	               });
+               	
+            }
+        </script>
+    </body>
+</html>

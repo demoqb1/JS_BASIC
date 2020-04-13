@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/product.css">
+
+</head>
+<body>
+	<div class="table-responsive">
+		<!-- dùng this để lấy ra cái chính cái element này để set thuộc tính màu cho nó khí mình kích actice 1 button  -->
+		<button type="button" class="btn active " onclick="thaydoi('x',this)">Bấm vào đây</button>
+		<button type="button" class="btn " onclick="thaydoi('y',this)">Để thay đổi</button>
+		<button type="button" class="btn " onclick="thaydoi('z',this)">category</button>
+	
+	<div class="" id="a">
+		
+			 <img src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-9.jpg" alt="">
+			 <img src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-9.jpg" alt="">
+			 <img src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-9.jpg" alt="">
+			 <img src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-9.jpg" alt="">
+		
+	</div>
+
+	<div class=""  id="b">
+		 <img src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-2.jpg" alt="">
+		 <img src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-2.jpg" alt="">
+		 <img src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-2.jpg" alt="">
+		 <img src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-2.jpg" alt="">
+	</div>
+
+	<div class="" id="c">
+		 <img src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-4.jpg" alt="">
+		 <img src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-4.jpg" alt="">
+		 <img src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-4.jpg" alt="">
+		 <img src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-4.jpg" alt="">
+	</div>
+
+	<script>
+		function thaydoi(a,element){
+
+
+			let but =document.getElementsByClassName('active');
+			for ( i = 0; i < but.length; i++) {
+				but[i].style.background='green';
+			}
+			console.log(but);
+			
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+<script type="text/javascript">
+var array=[
+    {name: 'Hoang', age:15},
+    {name: 'Quy', age:12},
+    {name: 'Xuan', age:14}
+];
+
+var object ={name:"quy",
+        tuoi:14,
+        gioitinh:"nam"
+      }
+//VÒNG FOR OF DUYỆT QUA TẤT CẢ PHẦN TỬ MẢNG , 
+//VÒNG FOR IN DUYỆT QUA TẤT CẢ KEY TRONG OBJECT
+for(var bien  of array ){
+    console.log(bien,bien.age);
+} 
+
+for(var key in object ){
+  // muốn truyền thêm value trong for in dùng y[varr]
+    console.log(key,object[key]);
+}
+
+
+ var number=[4,4,4,6];
+function multiply(number) {
+    var sum=1;
+    for(var bien of number){
+      sum*=bien;     
+    }
+    console.log(sum);
+}
+multiply(number);
+    
+</script>
+-----------------------------------------------------------------------
+<ul id="contact-list" style="font-family:sans-serif;color:red" >
+  
+</style>>
+  
+</ul>
+<script type="text/javascript">
+  var mang=[
+      {name: 'Hoang', age:15},
+      {name: 'Quy', age:12},
+      {name: 'Xuan', age:14}
+  ];
+  var noidung='';
+  for(var bien  of mang ){
+      noidung +='<li>'+bien.name +'</li>';
+  } 
+ 
+ document.getElementById('contact-list').innerHTML=noidung;
+
+</script>
+------------------------------------------------------
+<script>
+   var array= [];
+function multiply(arr) {
+  for(var bien of array){
+      console.log()
+  }
+}
+multiply(1,2,3,4);
+</script>
+
+
+</body>
+</html>

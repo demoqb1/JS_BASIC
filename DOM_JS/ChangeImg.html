@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Change IMG</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<ul>
+		<li><img onclick="ChangeImg('1')" id="1" src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-1.jpg" alt=""></li>
+		<li><img onclick="ChangeImg('2')" id="2" src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-7.jpg" alt=""></li>
+		<li><img onclick="ChangeImg('3')" id="3" src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-28.jpg" alt=""></li>
+		<li><img onclick="ChangeImg('4')" id="4" src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-9.jpg" alt=""></li>
+	</ul>
+
+	<div id="main-img">
+		<img src="C:\Users\DELL\Desktop\demo_19\assets\images\products\product-10.jpg" id="img">
+	</div>
+		
+	<script >
+		function ChangeImg(id){
+			let pathImg = document.getElementById(id).getAttribute('src');
+			console.log(pathImg);
+			document.getElementById('img').setAttribute('src',pathImg);
+
+		}
+	</script>
+</body>
+</html>

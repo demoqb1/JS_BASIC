@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+<script type="text/javascript">
+var r = 4;
+const pi=3.14;
+var p;
+var s;
+
+function cv(r){
+    p=2*r*pi;
+    return p;
+};
+function dt(r){
+    s=(r*r)*pi;
+    return s;
+};
+    console.log(cv(r));
+    console.log(dt(r));
+  
+
+
+	
+	var rectangle = {
+    width: 100,
+    height: 200,
+   getWidth: function(){
+      console.log(this.width)
+       return this.width
+   },
+    getHeight: function(){
+       console.log(this.height)
+       return this.height
+       
+   },
+   getArea: function(){
+       return this.width*this.height
+       console.log( this.width*this.height);
+   }
+ };
+rectangle.getWidth();
+rectangle.getHeight();
+rectangle.getArea();
+rectangle.getArea(rectangle.width,rectangle.height);
+
+</script>
+</body>
+</html>
