@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JSON.stringify will convert any date objects into strings.</h2>
+
+<p id="demo"></p>
+
+<script>
+var obj = { name: "John", today: new Date(), city: "New York" };
+console.log(obj);
+var myJSON = JSON.stringify(obj);
+var convert=JSON.parse(myJSON);
+console.log("sau khi stringiy :"+myJSON);
+console.log(convert);
+document.getElementById("demo").innerHTML = myJSON;
+//Hàm JSON.stringify(obj) chuyển đổi ob js thành chuỗi json
+//Hàm JSON.parse(obj) chuyển đổi chuổi json thành ob js
+var obsj = { "table":"customers", "limit":10 };
+console.log(obsj);
+dbParam = JSON.stringify(obsj);
+console.log(dbParam);
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h3>Inser Du lieu form</h3>
+			<form method="post" id="insertdata_hoten" accept-charset="utf-8">
+				<label>Họ và tên</label>
+				<input type="text" class="form-control" placeholder="Họ Và Tên" id="name">
+				<label>SĐT</label>
+				<input type="text" class="form-control" placeholder="SĐT" id="phone">
+				<label>Địa Chỉ</label>
+				<input type="text" class="form-control" placeholder="Address" id="address">
+				<label>Email</label>
+				<input type="text" class="form-control" placeholder="Emails" id="emails">
+				<label>Ghi Chú</label>
+				<input type="text" class="form-control" placeholder="Note" id="note">
+				<br>
+				<input type="button" id="insert_data" value="Submit" class="btn btn-success">
+			</form>
+
+			<h3>Load data</h3>
+			<div id="load_data"> 
+
+			
+
+				
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" charset="utf-8" >
+		$(document).ready(function() {
+			function fetch_data(){
+ 				//đổ dữ liệu bằng ajax
+ 				$.ajax({
+						url:'ajax_action.php',
+						method:'POST',
+					success:function(data){
+							
+							$('#load_data').html(data);
+							
+					   }	
+					});	
+			}
+
+			fetch_data();
+
+			$('#insert_data').on('click',function() {
+				var hoten=$('#name').val();
+				var dienthoai=$('#phone').val();
+				var diachi=$('#address').val();
+				var mail=$('#emails').val();
+				var ghichu=$('#note').val();
+
+				if (hoten =='' || dienthoai=='' || diachi==''||mail==''||ghichu=='') {
+					alert('Vui lòng nhập đầy đủ');
+				}
+				else{
+					$.ajax({
+						url:'ajax_action.php',
+						method:'POST',
+						data:{
+							hoten:hoten,
+							dienthoai:dienthoai,
+							diachi:diachi,
+							mail:mail,
+							ghichu:ghichu
+						},
+					success:function(data){
+							alert('Thêm Dữ Liệu Thành Công');
+							$('#insertdata_hoten')[0].reset();
+					   		fetch_data();	
+					   }
+					});
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>
